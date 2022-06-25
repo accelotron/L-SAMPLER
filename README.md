@@ -5,9 +5,9 @@ Neural Sampler for mixing two sounds together.
 
 ## Installation
 Download repo and then install requirements:
-'''
+```
 pip install -r requirements.txt
-'''
+```
 
 ## Usage
 You can: select two samples using two file viewers, preview a sample by clicking on it's name, press generate button to generate a new sample,
