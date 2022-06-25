@@ -10,6 +10,11 @@ pip install -r requirements.txt
 ```
 
 ## Usage
+Run app.py with:
+```
+python3 app.py
+```
+
 You can: select two samples using two file viewers, preview a sample by clicking on it's name, press generate button to generate a new sample,
 preview generated sample by pressing on piano roll using keyboard or mouse, export your file by pressing export button
 
