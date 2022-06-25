@@ -15,7 +15,7 @@ You can add your own samples, but there is a couple of details, that you should 
 
 ## RAVE
 This project uses pre-trained RAVE model (trained on NSynth dataset), but doesn't include any parts of RAVE source code.
-[Check out RAVE -> (It's very cool)](https://github.com/acids-ircam/RAVE)
+[Check out RAVE](https://github.com/acids-ircam/RAVE)
 
 ## NSynth
-This project uses files from NSynth dataset as an example.
+This project uses files from NSynth dataset as an example. [Check out NSynth](https://magenta.tensorflow.org/datasets/nsynth)
