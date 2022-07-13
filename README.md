@@ -1,7 +1,7 @@
 # L+SAMPLER
 Neural Sampler for mixing two sounds together.
 
-![L+SAMPLER](https://user-images.githubusercontent.com/36171138/178833099-aa52a1f7-df93-467b-83d5-d194e43099ea.png)
+![logo](https://user-images.githubusercontent.com/36171138/178833253-b9a76d91-172f-4e8a-8c52-b1b218aa6482.png)
 
 
 ## Installation
