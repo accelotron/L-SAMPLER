@@ -3,9 +3,8 @@ Neural Sampler for mixing two sounds together.
 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/36171138/178833253-b9a76d91-172f-4e8a-8c52-b1b218aa6482.png" />
+  <img src="https://user-images.githubusercontent.com/36171138/178837912-df01029c-ddd1-4276-a6f4-e6351407bd79.png" />
 </p>
-
 
 ## Installation
 Download repo and then install requirements:
