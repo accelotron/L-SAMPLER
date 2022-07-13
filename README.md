@@ -22,7 +22,7 @@ You can: select two samples, preview a sample by clicking on it's name, press ge
 You can add your own samples in /samples directory.
 
 ## RAVE
-This project uses pre-trained RAVE model (trained on NSynth dataset) in .ts format.
+This project uses RAVE model (trained on NSynth dataset).
 [Check out RAVE](https://github.com/acids-ircam/RAVE)
 
 ## NSynth
