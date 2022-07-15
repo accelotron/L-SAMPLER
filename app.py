@@ -29,7 +29,7 @@ class App(tk.Tk):
         self.piano_sounds = None
 
         # init model
-        self.model = ModelWrapperRave('rave-nsynth-epic.ts', 16000)
+        self.model = ModelWrapperRave(os.path.join('models', 'rave-nsynth-epic.ts'), 16000)
 
         # colors
         self.colors = {
@@ -294,4 +294,6 @@ if __name__ == "__main__":
     app = App()
     if not os.path.exists('outputs'):
         os.mkdir('outputs')
+    if not os.path.exists('samples'):
+        os.mkdir('samples')
     app.mainloop()
