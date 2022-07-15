@@ -289,13 +289,6 @@ class App(tk.Tk):
 
 if __name__ == "__main__":
     app = App()
-    # https://stackoverflow.com/questions/27215326/tkinter-keypress-and-keyrelease-events
-    # Prevents bug so <KeyPress> event appears once
-    # Works, but user can't use keyboard as usual, needs to be fixed
-    os.system('xset r off')
     if not os.path.exists('outputs'):
         os.mkdir('outputs')
-    try:
-        app.mainloop()
-    finally:
-        os.system('xset r on')
+    app.mainloop()
