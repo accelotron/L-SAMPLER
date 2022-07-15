@@ -10,8 +10,9 @@ class PianoSounds:
         self.pg_sounds = []
 
         for i in range(-5, 7):
-            sound_li = li.effects.pitch_shift(root, 16000, float(i))
-            self.pg_sounds.append(pg.sndarray.make_sound((sound_li*32768).astype(np.int16)))
+            note_sound = (li.effects.pitch_shift(root, 16000, float(i))*32768).astype(np.int16)
+            note_sound = np.repeat(note_sound[:, np.newaxis], 2, axis=1).reshape([note_sound.shape[0], 2])
+            self.pg_sounds.append(pg.sndarray.make_sound(note_sound))
 
     def play_sound(self, note_id):
         pg.mixer.stop()

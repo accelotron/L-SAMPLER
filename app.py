@@ -25,7 +25,7 @@ class App(tk.Tk):
         super().__init__()
 
         # init sounds
-        pg.mixer.init(frequency=16000, channels=1)
+        pg.mixer.init(frequency=16000)
         self.piano_sounds = None
 
         # init model
@@ -68,17 +68,17 @@ class App(tk.Tk):
         self.mash_frame = ttk.Frame(self)
 
         self.samples = os.listdir('samples')
+        if len(self.samples) == 0:
+            raise ValueError('Samples folder is empty!')
 
         self.combobox1 = ttk.Combobox(self.mash_frame)
-        self.combobox1.bind("<<ComboboxSelected>>", lambda e, c=self.combobox1: self.combo_play(e, c))
+        self.combobox1.bind("<<ComboboxSelected>>", lambda e, c=self.combobox1: self.combo_select(e, c))
         self.combobox1['values'] = self.samples
-        self.combobox1.current(0)
         self.combobox1['state'] = 'readonly'
         self.combobox1['width'] = 16
         self.combobox2 = ttk.Combobox(self.mash_frame)
-        self.combobox2.bind("<<ComboboxSelected>>", lambda e, c=self.combobox2: self.combo_play(e, c))
+        self.combobox2.bind("<<ComboboxSelected>>", lambda e, c=self.combobox2: self.combo_select(e, c))
         self.combobox2['values'] = self.samples
-        self.combobox2.current(0)
         self.combobox2['state'] = 'readonly'
         self.combobox2['width'] = 16
 
@@ -255,13 +255,16 @@ class App(tk.Tk):
         if self.piano_sounds:
             self.piano_sounds.play_sound(note_id)
 
-    def combo_play(self, e, combobox):
+    def combo_select(self, e, combobox):
         print('Sound played', combobox.get())
         pg.mixer.stop()
         pg.mixer.Sound(os.path.join('samples', combobox.get())).play()
 
     def generate_action(self):
         print('Generate', self.scale.get(), self.combobox1.get(), self.combobox2.get())
+        if not self.combobox1.get() or not self.combobox2.get():
+            raise ValueError('To generate a sample you must select 2 base files.')
+
         root = self.model.mash_two(
             os.path.join('samples', self.combobox1.get()),
             os.path.join('samples', self.combobox2.get()),
