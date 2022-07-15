@@ -43,9 +43,6 @@ class ModelWrapperRave:
 
 
 if __name__ == "__main__":
-    import pygame
-    from time import sleep
-
     mw = ModelWrapperRave('models/rave-nsynth-epic.ts', 16000)
     mashed = mw.mash_two(
         os.path.join('samples', 'flute_synthetic_006-048-127.wav'),

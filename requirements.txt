@@ -1,5 +1,6 @@
 librosa==0.7.2
 pygame==2.1.2
 SoundFile==0.10.3.post1
-torch==1.11.0+cpu
 numpy==1.19.3
+Pillow==7.0.0
+torch==1.11.0+cpu
