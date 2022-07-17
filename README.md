@@ -1,9 +1,8 @@
 # L+SAMPLER
-Neural Sampler for mixing two sounds together.
-
+Neural Sampler for mixing two sounds together. [Watch video demo](https://www.youtube.com/watch?v=yvEHuRWEs7k&ab_channel=accelovid)
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/36171138/178837912-df01029c-ddd1-4276-a6f4-e6351407bd79.png" />
+  <img src="https://user-images.githubusercontent.com/36171138/179401800-212266ae-bf79-40ee-abc3-f9bc53d36b28.png">
 </p>
 
 ## Installation
